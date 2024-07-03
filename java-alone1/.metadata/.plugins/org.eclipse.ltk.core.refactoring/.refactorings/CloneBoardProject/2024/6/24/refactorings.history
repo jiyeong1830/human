@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.student1.utils.DBManger&apos; to &apos;DBManager&apos;&#x0D;&#x0A;- Original project: &apos;CloneBoardProject&apos;&#x0D;&#x0A;- Original element: &apos;com.student1.utils.DBManger&apos;&#x0D;&#x0A;- Renamed element: &apos;com.student1.utils.DBManager&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DBManger&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.student1.utils{DBManger.java[DBManger" matchStrategy="1" name="DBManager" qualified="false" references="true" similarDeclarations="false" stamp="1718343386746" textual="false" version="1.0"/>
+</session>

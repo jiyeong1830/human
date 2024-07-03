@@ -1,0 +1,5 @@
+부서번호,부서명,부서생성일자,
+A1,영업부,2022-01-01,"INSERT INTO departments values('A1', '영업부','2022-01-01');"
+A2,기획부,2023-02-02,"INSERT INTO departments values('A2', '시획부','2023-02-02');"
+A3,개발부,2021-03-03,"INSERT INTO departments values('A3', '개발부','2021-03-03');"
+A4,홍보부,2020-04-04,"INSERT INTO departments values('A4', '홍보부','2020-04-04');"

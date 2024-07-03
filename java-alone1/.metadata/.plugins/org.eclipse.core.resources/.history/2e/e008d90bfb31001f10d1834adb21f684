@@ -1,0 +1,71 @@
+package myProjectboard;
+
+import java.util.Scanner;
+
+public class finalsystem {
+
+	public static void main(String[] args) {
+		System.out.println("상품 구매 프로그램 시작");
+			
+		finalService finalService  = new finalService ();	// 프로그램 접근 및 제어 객체 생성
+		Scanner scanner = new Scanner(System.in);			// 키보드입력 받는 객체
+			
+		// 0. 상품 구매 프로그램 대기를 위해 무한루프 코드 작성
+		while(true) {
+			// 프로그램 제목
+			System.out.println("                    << 메뉴 >>");
+			// 프로그램 메뉴
+			System.out.println("(1.아이디 패스워드 입력, 2.상품 목록 확인, 3.상품 상세보기, 4.구매할 상품 선택, 5.구매한 상품 목록보기, 6.종료)>> ");
+
+			// 1. 메뉴 선택번호를 입력받기
+			int menuNumber = 0;
+			try {
+				menuNumber = Integer.parseInt(scanner.nextLine());	
+			} catch(Exception e) {
+				System.out.println("잘못된 값을 입력하셨습니다. 다시 입력을 해주세요.");
+				continue;
+			}
+			System.out.print("선택된 번호 -> " + menuNumber);
+				
+			if (menuNumber < 1 || menuNumber > 6) {
+				System.out.println("\n메뉴 번호는 1~6번 사이의 숫자만 가능");
+				continue;
+			}
+				
+			switch(menuNumber) {
+				case 1:	// 아이디 패스워드 작성 실행
+					System.out.println("(아이디 작성)");
+				
+					finalService.insertproduct();
+					break;
+				case 2:	// 상품 목록 실행
+					System.out.println("(상품 목록)");
+						
+					finalService.selectAllproduct();
+					break;
+				case 3:	// 상세보기 실행
+					System.out.println("(상세보기)");
+						
+					finalService.selectOneproduct();
+					break;
+				case 4:	// 상품 선택 실행
+					System.out.println("(상품 선택)");
+						
+					finalService.chooseOneproduct();
+					break;
+				case 5: // 선택한 상품 목록 실행
+					System.out.println("(상품 보기)");
+						
+					finalService.chooseAllproduct();
+					break;
+			}
+			if(menuNumber == 6) {	// 6번일 때는 무한루프를 빠져나가게 하여 프로그램을 종료
+				System.out.println("(종료)");
+				break;
+			}
+		}
+			
+		// 프로그램 종료 표시
+		System.out.println("상품 구매 프로그램 종료");
+	}
+}
