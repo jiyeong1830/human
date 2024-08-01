@@ -1,0 +1,129 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.parent {
+    font-size: 30px;
+}
+.child {
+    font-size: 200%; /* 부모가 30px * 0.5 = 15px */
+}
+.child-to-child {
+    font-size: 50%; /* 부모가 15px * 0.5 = 7.5px */
+}
+
+.parent-em {
+    font-size: 30px;
+}
+.child-em {
+    font-size: 2em; /* 부모가 30px * 2 = 60px */
+}
+
+html {
+    font-size: 30px;
+}
+
+.parent-vw {
+    font-size: 2vw; /* viewport의 가로크기의 2/100 */
+}
+.parent-vh {
+    font-size: 2vh; /* viewport의 세로크기의 2/100 */
+}
+
+.margin-a {
+    margin: 30px 60px 15px 10px;
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.margin-b {
+    margin-top: 30px;
+}
+
+.border-a {
+    border: 10px solid black;
+    border-width: 7px;
+    border-style: dashed;
+    border-color: blue;
+    border-top-width: 2px;
+}
+.border-b {
+    width: 250px;
+    height: 45px;
+    background-color: orange;
+    border: 0px solid black;
+    /* border-radius: 10px 0 0 0;
+    border-top-left-radius: 10px; */
+    text-align: center;    
+}
+
+.search-a {
+    width: auto;
+    height: 40px;
+    border: 1px solid greenyellow;
+    border-radius: 20px;
+}
+.naver-login {
+    height: 40px;
+    background-color: yellowgreen;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+.circle {
+    width: 60px;
+    height: 200px;
+    background-color: orange;
+    border-radius: 75%;
+}
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid orange;
+}
+
+.padding-a {
+    margin: 100px;
+    border: 1px solid black;
+    padding: 100px;
+}
+.box-size {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border: 10px solid black;
+    padding: 10px;
+    /* box-sizing: border-box; */
+}
+
+.parent-overflow-a {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    overflow: hidden;
+}
+.child-overflow-a {
+    width: 200px;
+    height: 50px;
+    background-color: orange;
+    /* position: relative;
+    top: 30px;
+    left: 30px; */
+}
+.parent-overflow-b {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    overflow: auto;
+}
+.child-overflow-b {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+}
+
+

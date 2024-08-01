@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.transition1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* transition-property: width, background-color; */
+            /* transition-duration: 4s; */
+            /* transition-delay: 1s; */
+            /* transition: width 5s, background-color 2ms; */
+            /* transition: 1s 0.5s; */
+            /* transition: 
+                width 5s, 
+                background-color 2s
+                cubic-bezier(.72,.52,.84,.54)
+                2s; */
+                transition: 3s cubic-bezier(.72,.52,.84,.54)
+        }
+        div.transition1:active {
+            width: 300px;
+            background-color: royalblue
+        }
+    </style>
+</head>
+<body>
+    <div class="transition1"></div>
+</body>
+</html>
