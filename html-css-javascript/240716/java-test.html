@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ['Apple', 'Banana', 'Cherry'];
+        console.log(fruits[1]);
+
+        let obj = { abc:123};
+        console.log(obj.xyz);
+
+        const hello = function() {};
+        hello();
+
+        if (true) {}
+
+        const boxEl = document.querySelector('.box');
+        console.log(boxEl.textContent);
+
+        boxEl.addEventListener('click', function ( ) {
+            console.log('Hello~');
+        });
+
+        const divEls = document.querySelectorAll('div');
+        divEls.forEach(function (divEl) {
+            divEl.classList.add('hello');
+        });
+
+        if (boxEl.classList.contains('active')) {
+            console.log('포함됨!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const object1 = [{ name: '멍멍이' }, { name: '야옹이' }];
+        console.log(object1);
+        console.log(object1[0]);
+        console.log(object1[1]);
+
+        const object2 = [{ name: '멍멍이' }, { name: '야옹이' }];
+        object2.push({
+        name: '멍뭉이'
+        });
+        console.log(object2);
+    
+        const object3 = [{ name: '멍멍이' }, { name: '야옹이' }];
+        console.log(object3.length);
+        object3.push({
+        name: '멍뭉이'
+        });
+        console.log(object3.length);
+
+        const superheroes1 = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+        superheroes1.forEach(hero => {
+        console.log(hero);
+        });
+
+        const array = [1, 2, 3, 4, 5, 6, 7, 8];
+        const square = n => n * n;
+        const squared1 = array.map(square);
+        console.log(squared1);
+
+        const squared2 = array.map(n => n * n);
+        console.log(squared2);
+
+        const superheroes2 = ['아이언맨', '캡틴 아메리카', '토르', '닥터 스트레인지'];
+        const index1 = superheroes2.indexOf('토르');
+        console.log(index1);
+
+        const todos1 = [
+            {
+                id: 1,
+                text: '자바스크립트 입문',
+                done: true
+            },
+            {
+                id: 2,
+                text: '함수 배우기',
+                done: true
+            },
+            {
+                id: 3,
+                text: '객체와 배열 배우기',
+                done: true
+            },
+            {
+                id: 4,
+                text: '배열 내장함수 배우기',
+                done: false
+            }
+        ];
+    </script>
+</body>
+</html>
