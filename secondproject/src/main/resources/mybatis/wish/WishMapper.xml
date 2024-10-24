@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secondproject.mybatis.WishMapper">
+    <select id="getWishVOList" resultType="com.example.secondproject.wishlist.WishListVO">
+        <![CDATA[
+            select
+                id,
+                title,
+                category,
+                jibun_address AS jibunAddress,
+                road_address AS roadAddress,
+                homepage_link AS homepageLink,
+                image_link AS imageLink,
+                visit_count AS visitCount,
+                visit_is AS visitIs,
+                last_visit_date AS lastVisitDate
+            from wish
+        ]]>
+    </select>
+
+    <insert id="insertWishVO">
+        <![CDATA[
+            insert into wish (
+                title,
+                category,
+                jibun_address,
+                road_address,
+                homepage_link,
+                image_link,
+                visit_count,
+                visit_is,
+                last_visit_date
+            ) values (
+                #{title},
+                #{category},
+                #{jibunAddress},
+                #{roadAddress},
+                #{homepageLink},
+                #{imageLink},
+                #{visitCount},
+                #{visitIs},
+                #{lastVisitDate}
+            )
+        ]]>
+    </insert>
+
+    <update id="updateWishVisit">
+        <![CDATA[
+            UPDATE
+                wish
+            SET
+                visit_count = visit_count + 1,
+                visit_is = true,
+                last_visit_date = now()
+            WHERE
+                id = #{id}
+        ]]>
+    </update>
+
+    <delete id="deleteWishList">
+        <![CDATA[
+            DELETE FROM wish WHERE id = #{wishId}
+        ]]>
+    </delete>
+</mapper>
